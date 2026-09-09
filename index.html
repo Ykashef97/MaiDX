@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Verdant Living — premium outdoor wooden furniture for Egypt." />
+    <title>Verdant Living | Outdoor furniture, beautifully made</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:opsz,wght@5..1200,500;5..1200,600;5..1200,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="announcement">Complimentary delivery in Greater Cairo on orders over EGP 12,000 <span>✦</span> Crafted for the outdoors</div>
+    <header class="header">
+      <a class="brand" href="#top" aria-label="Verdant Living home">VERDANT <i>LIVING</i></a>
+      <nav aria-label="Main navigation">
+        <a href="#spaces">Shop by space</a><a href="#collection">Collection</a><a href="#story">Our story</a>
+      </nav>
+      <div class="actions">
+        <button class="icon-button" id="searchButton" aria-label="Search">⌕</button>
+        <button class="icon-button" id="wishlistButton" aria-label="Wishlist">♡<small id="wishCount">0</small></button>
+        <button class="icon-button" id="cartButton" aria-label="Shopping cart">Bag <small id="cartCount">0</small></button>
+      </div>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">MADE FOR OPEN SKIES</p>
+          <h1>Gather beautifully,<br><em>live outdoors.</em></h1>
+          <p class="hero-copy">Thoughtfully crafted wooden furniture for the slow mornings, long lunches, and starlit conversations ahead.</p>
+          <a class="button light" href="#spaces">Find your perfect piece <span>→</span></a>
+        </div>
+      </section>
+      <section class="intro" id="spaces">
+        <div><p class="eyebrow">START WITH YOUR SPACE</p><h2>Where does life<br>happen <em>outside?</em></h2></div>
+        <p>Every outdoor space has its own rhythm. Choose yours, and we'll introduce you to furniture designed to belong there.</p>
+      </section>
+      <section class="spaces-grid" aria-label="Shop by outdoor space">
+        <button class="space-card active" data-space="Garden"><img src="https://images.unsplash.com/photo-1558521958-0a228e77e984?auto=format&fit=crop&w=800&q=85" alt="Garden seating"><span>01</span><strong>Garden</strong><i>Explore →</i></button>
+        <button class="space-card" data-space="Balcony"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=85" alt="Balcony chair"><span>02</span><strong>Balcony</strong><i>Explore →</i></button>
+        <button class="space-card" data-space="Patio"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=85" alt="Patio furniture"><span>03</span><strong>Patio</strong><i>Explore →</i></button>
+        <button class="space-card" data-space="Poolside"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=85" alt="Poolside lounge"><span>04</span><strong>Poolside</strong><i>Explore →</i></button>
+      </section>
+      <section class="collection" id="collection">
+        <div class="section-head"><div><p class="eyebrow">THE EDIT</p><h2>Furniture with<br><em>a point of view.</em></h2></div><button class="text-button" id="showAll">View all pieces →</button></div>
+        <div class="filters"><button class="filter active" data-filter="All">All pieces</button><button class="filter" data-filter="Dining">Dining</button><button class="filter" data-filter="Lounge">Lounge</button><button class="filter" data-filter="Folding">Folding</button><span class="filter-note" id="filterNote">Curated for Garden</span></div>
+        <div class="products" id="products"></div>
+      </section>
+      <section class="material" id="story">
+        <div class="material-image"></div><div class="material-copy"><p class="eyebrow">THE VERDANT STANDARD</p><h2>Built to weather<br>your <em>best days.</em></h2><p>We work with naturally enduring teak and acacia, then finish every piece to stand up beautifully to sun, water, and everyday life.</p><ul><li><b>01</b> Responsibly sourced hardwood</li><li><b>02</b> Weather & UV resistant finishes</li><li><b>03</b> Delivered and assembled with care</li></ul><a href="#collection" class="text-button">Discover our materials →</a></div>
+      </section>
+      <section class="newsletter"><p class="eyebrow">A BREATH OF FRESH AIR</p><h2>Stay close to <em>the outdoors.</em></h2><p>Seasonal notes, new arrivals, and a little inspiration for living well outside.</p><form id="subscribeForm"><input type="email" placeholder="Your email address" aria-label="Email address" required><button class="button dark">Join us →</button></form></section>
+    </main>
+    <footer><a class="brand" href="#top">VERDANT <i>LIVING</i></a><p>Designed in Cairo. Made for everywhere.</p><div><a href="#collection">Shop</a><a href="#story">Materials</a><a href="#">Delivery & returns</a></div><p>© 2026 Verdant Living</p></footer>
+    <div class="overlay" id="overlay"></div>
+    <aside class="drawer" id="drawer" aria-label="Shopping bag"><div class="drawer-head"><h2>Your bag</h2><button class="close" aria-label="Close">×</button></div><div id="cartItems" class="cart-items"><p class="empty">Your bag is ready for something beautiful.</p></div><div class="cart-footer"><div><span>Subtotal</span><b id="subtotal">EGP 0</b></div><button class="button dark wide" id="checkout">Checkout securely →</button></div></aside>
+    <dialog id="checkoutDialog"><button class="close modal-close">×</button><div id="checkoutContent"><p class="eyebrow">SECURE CHECKOUT</p><h2>A few final details.</h2><form id="checkoutForm"><label>Full name<input required placeholder="Your full name"></label><label>Mobile number<input required type="tel" placeholder="01X XXX XXXX"></label><label>Governorate<select required><option value="">Select governorate</option><option>Cairo</option><option>Giza</option><option>Alexandria</option><option>Other Governorate</option></select></label><label>Delivery address<input required placeholder="Street, building, apartment"></label><label>Payment method<select><option>Cash on delivery</option><option>Credit or debit card</option><option>Digital wallet</option></select></label><button class="button dark wide">Place order →</button></form></div></dialog>
+    <div class="toast" id="toast" role="status"></div><script src="app.js"></script>
+  </body>
+</html>
